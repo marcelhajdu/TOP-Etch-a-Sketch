@@ -1,8 +1,17 @@
 const boxContainer = document.querySelector(".boxContainer");
 
-for (i = 0; i < 256; i++) {
-  let insDiv = document.createElement("div");
-  //insDiv.textContent = "Im a new div";
-  insDiv.classList.add("item");
-  boxContainer.appendChild(insDiv);
+function render(num) {
+  for (i = 0; i < num * num; i++) {
+    let insDiv = document.createElement("div");
+    insDiv.classList.add("item");
+    boxContainer.appendChild(insDiv);
+  }
 }
+
+function changeColor(e) {
+  e.target.style.background = "blue";
+}
+
+boxContainer.addEventListener("mouseover", changeColor);
+
+render(15);
