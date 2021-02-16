@@ -6,7 +6,6 @@ function render(num) {
     let insDiv = document.createElement("div");
     insDiv.classList.add("item");
     boxContainer.appendChild(insDiv);
-    //insDiv.style.background = "white";
   }
 }
 
@@ -17,6 +16,8 @@ function changeColor(e) {
 boxContainer.addEventListener("mouseover", changeColor);
 
 btn.addEventListener("click", () => {
+  //insDiv.style.background = "white";
+  boxContainer.innerHTML = "";
   render(15);
 });
 
