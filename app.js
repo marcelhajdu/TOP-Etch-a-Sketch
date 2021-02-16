@@ -16,9 +16,13 @@ function changeColor(e) {
 boxContainer.addEventListener("mouseover", changeColor);
 
 btn.addEventListener("click", () => {
-  //insDiv.style.background = "white";
   boxContainer.innerHTML = "";
-  render(15);
+  let num = prompt("Please type in how many bricks you want");
+  if (num <= 33) {
+    render(num);
+  } else {
+    render(33);
+  }
 });
 
 render(15);
